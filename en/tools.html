@@ -20,7 +20,8 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" href="/assets/images/tool/tools_logo.png">
-   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
      <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/top_btn.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -68,6 +69,7 @@ font-family: 'main-font';
 }
 </style>
 <style type="text/css">
+
   .btn-group-lg>.btn, .btn-lg {
       padding: .5rem 1rem;
       font-size: -1.75rem;
@@ -93,6 +95,32 @@ font-family: 'main-font';
   font-family: 'Averox';
 
 }
+
+html {
+    scroll-behavior: smooth;
+
+  }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #23282c;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
   </style>
 </head>
 
@@ -164,10 +192,34 @@ font-family: 'main-font';
         <div class="container">
           <div class="text-center">
             <a href="/en/" style=" text-decoration: none;"> <button type="button" class="btn btn-dark">BACK</button></a>
-            <a id="button"></a>
 
-            </div><br><br> 
-</div>
+
+            </div></div><br><br> 
+            <a href=""><button onclick="topFunction()" id="myBtn" title="Go to top">Top <i class="fas fa-chevron-up"></i></button></a>
+
+            <script>
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+      </script>
+
+
 <br>
                 <!--Start Card-->
                 <div class="col-auto mb-3">
@@ -308,7 +360,5 @@ font-family: 'main-font';
             </div>
         </div>
         <script src="/assets/js/encode.js"></script>
-        <script src="/assets/js/top_btn.js"></script>
-
       </body>
       </html>
