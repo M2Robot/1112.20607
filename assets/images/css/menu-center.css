@@ -1,0 +1,20 @@
+ul li {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+li {
+    display:flex;
+    color: white;
+    cursor: pointer;
+    justify-content: left;
+    text-indent: 50px;
+
+}
+i {
+    margin-right: -8%;
+}
+.nav__item, .nav__text {
+    margin-top: 3%;
+    line-height: 55px;
+}
