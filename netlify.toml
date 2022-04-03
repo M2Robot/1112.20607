@@ -1,0 +1,8 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+  max-age=0,
+  no-cache,
+  no-store,
+  X-Frame-Options = "DENY"
+  X-XSS-Protection = "1; mode=block"
