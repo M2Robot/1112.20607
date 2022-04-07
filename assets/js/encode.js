@@ -73,11 +73,11 @@
                     // Setup ctrl+Key
                     window.addEventListener('keydown', function (event) {
                       if (event.ctrlKey && event.code === 'KeyX') {
-                        window.location.href = '/admin/';
+                        window.location.href = '/me';
                       }
                     });
                     window.addEventListener('keydown', function (event) {
                       if (event.code === 'KeyX') {
-                        window.location.href = '/admin/';
+                        window.location.href = '/me';
                       }
                     });
