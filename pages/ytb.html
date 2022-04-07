@@ -22,10 +22,11 @@
     <script>
         if (document.cookie.indexOf("admin=true") == -1) {
             document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            location.href = "/login"; 
         }
         
         else {
-            location.href = "list.html"; 
+            location.href = "/pages/ytb"; 
         }
             </script>
 

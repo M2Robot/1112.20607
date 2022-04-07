@@ -15,15 +15,17 @@
     <title>Online Compiler</title>
 </head>
 <body>
+
     <script>
-        if (document.cookie.indexOf("admin=true") == -1) {
-            document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        }
-        
-        else {
-            location.href = "list.html"; 
-        }
-            </script>
+    if (document.cookie.indexOf("admin=true") == -1) {
+        document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        location.href = "/login";
+    }
+    
+    else {
+        location.href = "/plugins/editor/"; 
+    }
+        </script>
 
     <div class="main-editor">
         <button class="btn">Run</button>
