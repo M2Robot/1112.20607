@@ -1,19 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+if (document.cookie.indexOf("admin=true") == -1) {
+  location.href = "login.html"; 
+}
 
-<html>
-    <head>
-    <script type="text/javascript">
-    function load()
-    {
-    window.location.href = "/en/";
-
-    }
+else {
+    location.href = "list.html"; 
+}
     </script>
-    </head>
-    
-    <body onload="load()">
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJM2H8X"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    </body>
-    </html> 
+    <script src="/assets/js/encode.js"></script>
+
+</body>
+</html>

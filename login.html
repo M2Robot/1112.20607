@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="googlebot" content="noindex">
+    <meta name="googlebot-news" content="nosnippet">
+    <meta name="robots" content="nofollow" />
+    <meta name="robots" content="noimageindex" />
+    <meta name="robots" content=”max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
+    <script src="assets/ShowPass.js"></script>
+    <style>
+                    @font-face {
+                font-family: main-font;
+                src: url("/assets/fonts/Comfortaa-Regular.ttf") format("opentype");
+            }
+            * {
+                font-family: "main-font";
+            }
+        body {
+            background-color: #1f1f1f;
+        }
+        .login-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+        .login-form form {
+           margin-bottom: 15px;
+           background: #f7f7f7;
+           box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+           padding: 30px;
+           border-radius: 5%;
+        }
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .input-group-addon .fa {
+            font-size: 18px;
+        }
+        .btn {        
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+        <title> ACCESS </title>
+</head>
+<body>
+    <script>
+        if (document.cookie.indexOf("admin=true") == -1) {
+            document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        }
+        
+        else {
+            location.href = "list.html"; 
+        }
+            </script>
+        
+    <div class="main">
+        <div class="icon">
+        <i class="fas fa-user-friends fa-5x"></i><br><br>
+    </div>
+    
+    <script src="assets/data.js"></script>
+    <div class="login-form">
+        <form method="post">
+            <h2 class="text-center">Sign In</h2>   
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Username" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Password" class="form-control">
+                </div>
+            </div>        
+            <div class="form-group">
+        <input type="button" value="Login" onClick="Login(this.form);" class="btn btn-primary btn-block">
+            </div>
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline">       
+                     <input type="checkbox" onclick="myFunction()"> Show Password 
+                </div>        
+        </form>
+    </div>
+    
+
+ </head>
+
+
+ <script src="/assets/js/encode.js"></script>
+ 
+</body>
+</html>
