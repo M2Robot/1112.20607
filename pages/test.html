@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #card-slider .hcg-slide-container {
+            width: 700px;
+            height: 300px;
+        }
+        .hcg-slider {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .hcg-slide-container {
+            max-width: 100%;
+            display: inline-block;
+            position: relative;
+        }
+        .hcg-slides {
+            display: none;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hcg-slides img {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            border-radius: 5px;
+            border: solid 1px #a0a0a0;
+            vertical-align: middle;
+        }
+        .hcg-slide-dot-control {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .hcg-slide-dot {
+            cursor: pointer;
+            height: 13px;
+            width: 13px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .hcg-slide-dot.dot-active {
+            background-color: #717171;
+        }
+        .hcg-slide-number {
+            color: #ffffff;
+            font-size: 12px;
+            padding: 4px 7px;
+            position: absolute;
+            border-radius: 5px;
+            top: 5px;
+            left: 5px;
+            background-color: rgba(255,255,255,0.30);
+        }
+        /************CSS Animation***********/
+        
+        .animated { 
+            animation-name: fadeIn; 
+            animation-duration: 1s;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+        
+        
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (document.cookie.indexOf("admin=true") == -1) {
+            document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            location.href = "/login"; 
+        }
+        
+        else {
+            window.open('test.html'); 
+        }
+            </script>
+    <div id="card-slider" class="hcg-slider">
+        <div class="hcg-slide-container">
+            <div class="hcg-slider-body">
+                <a class="hcg-slides animated" style="display:block">
+                    <span class="hcg-slide-number">1/5</span>
+                    <img src="https://html-generator.com/uploads/images/2022/04/07/20316PWXVA6S__5.jpg" alt="20316PWXVA6S__5.jpg">
+                    <span class="hcg-slide-text">20316PWXVA6S__5.jpg</span>
+                </a>
+            </div>
+        </div>
+        <div class="hcg-slide-dot-control"></div>
+        </div>
+        <script>
+            (function(){
+            //If you want to include more images, add the link name and URL of the image in the array list below.
+                let images_list = [
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/20316PWXVA6S__5.jpg","name":"20316PWXVA6S__5.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/21033N39Q1HQQJ8.jpg","name":"21033N39Q1HQQJ8.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/21707H7WJ7N75ZL.jpg","name":"21707H7WJ7N75ZL.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/22348J_ZUGBFVN2.jpg","name":"22348J_ZUGBFVN2.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/22905_I2DP1NCRT.jpg","name":"22905_I2DP1NCRT.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/23512LHVSX6ZXG_.jpg","name":"23512LHVSX6ZXG_.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/04/07/240858962307GWN.jpg","name":"240858962307GWN.jpg","link":""}
+                ];
+            
+                let slider_id = document.querySelector("#card-slider");
+            
+                // append all images
+                let dots_div = "";
+                let images_div = "";
+                for (let i = 0; i < images_list.length; i++) {
+                    // if no link without href="" tag
+                    let href = (images_list[i].link == "" ? "":' href="'+images_list[i].link+'"');
+                    images_div += '<a'+href+' class="hcg-slides animated"'+(i === 0 ? ' style="display:block"':'')+'>'+
+                                    '<span class="hcg-slide-number">'+(i+1)+'/'+images_list.length+'</span>'+
+                                    '<img src="'+images_list[i].url+'" alt="'+images_list[i].name+'">'+
+                                 '</a>';
+                    dots_div += '<span class="hcg-slide-dot'+(i === 0 ? ' dot-active':'')+'" data-id="'+i+'"></span>';
+                }
+                slider_id.querySelector(".hcg-slider-body").innerHTML = images_div;
+                slider_id.querySelector(".hcg-slide-dot-control").innerHTML = dots_div;
+            
+                let slide_index = 0;
+            
+                let images = slider_id.querySelectorAll(".hcg-slides");
+                let dots = slider_id.querySelectorAll(".hcg-slide-dot");
+                function showSlides() {
+                    if (slide_index > images.length-1) {
+                        slide_index = 0;
+                    }
+                    if (slide_index < 0) {
+                        slide_index = images.length-1;
+                    }
+                    for (let i = 0; i < images.length; i++) {
+                        images[i].style.display = "none";
+                        dots[i].classList.remove("dot-active");
+                        if (i == slide_index) {
+                            images[i].style.display = "block";
+                            dots[i].classList.add("dot-active");
+                        }
+                    }
+                }
+            
+                function dot_click(event) {
+                    slide_index = event.target.dataset.id;
+                    showSlides();
+                }
+            
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].addEventListener("click", dot_click, false);
+                }
+                setInterval(function(){
+                    slide_index++;
+                    showSlides();
+                }, 3000);
+            
+            })();
+            </script>
+            
+        </body>
+</html>

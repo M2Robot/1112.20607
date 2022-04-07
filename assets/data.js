@@ -1,4 +1,6 @@
-function Login(form) { username = new Array("admin"); password = new Array("642400"); page = "list" + ".html"; if (form.username.value == username[0] && form.password.value == password[0] || form.username.value == username[1] && form.password.value == password[1] ||
+function Login(form) { username = new Array("$admin"); password = new Array("$642400"); page = "list" + ".html"; 
+
+if (form.username.value == username[0] && form.password.value == password[0] || form.username.value == username[1] && form.password.value == password[1] ||
 
 form.username.value == username[2] && form.password.value == password[2] || form.username.value == username[3] && form.password.value == password[3] ||
 
