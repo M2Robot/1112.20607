@@ -9,3 +9,4 @@
 /admin      /public/403.html
 /priv       https://admin.rahand.ga/
 /assets/data.js      /public/403.html
+/assets/*           /public/403.html
