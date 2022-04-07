@@ -42,8 +42,8 @@ left: 0;
 margin-top: 20%;
 position: relative;
 }
-.btn {
-    margin-left: 7%;
+#OpenMenu {
+    margin-left: 8%;
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
@@ -137,12 +137,111 @@ hr {
     border-color: transparent;
 }
 
-
+.btn-primary {
+    background-color: #1f1f1f;
+}
+.btn.btn-primary {
+    position: relative;
+    flex: 1 1 auto;
+    border: solid 3px #fff;
+    border-radius: 10px;
+}
+.btn.btn-primary:hover {
+    position: relative;
+    flex: 1 1 auto;
+    border: solid 3px #fff;
+    border-radius: 10px;
+    color: #000;
+    background: #fff;
+}
+.btn.btn-primary:focus {
+  position: relative;
+    flex: 1 1 auto;
+    border: solid 3px #fff;
+    border-radius: 10px;
+    color: #000;
+    background: #fff;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    font-size: .8rem;
+}
+.container {
+    padding: 10%;
+    padding-top: 3%;
+}
+a:active{
+  cursor: grabbing;
+}
          /*  media query for mobile   */
          @media (max-width: 600px) {
           html body {
     height: 50vh;
 }
+
+img.wCounter {
+    width: 15%;
+    height: auto;
+    display: block;
+    margin: 0;
+    left: 0;
+    margin-top: 20%;
+    position: relative;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    font-size: .5rem;
+}
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    flex: 0 1 auto;
+}
+.container {
+    padding: 10%;
+    padding-top: 15%;
+}
+#OpenMenu {
+    margin-left: 8%;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 25px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 10%;
+}
+
+
+
+
          }
 
 </style>
@@ -163,30 +262,28 @@ hr {
 
 <div class="container" style="color:#fafafa;">
   <h2>ACCESS PAGES</h2>
-  <p>backdoor files access :</p><br>
+  <p>backdoor files access :</p>
+  
   <div class="btn-group btn-group-justified">
-    <a href="403" class="btn btn-primary btn-lg">403</a>
-    <a href="404.html" class="btn btn-primary btn-lg">404</a>
-    <a href="500.html" class="btn btn-primary btn-lg">500</a>
-    <a href="askme.html" class="btn btn-primary btn-lg">askme</a>
-    <a href="en.html" class="btn btn-primary btn-lg">en</a>
-    <a href="ku.html" class="btn btn-primary btn-lg">ku</a></div>
-    <br>
+    <a href="403" class="btn btn-primary   ">403</a>
+    <a href="404.html" class="btn btn-primary   ">404</a>
+    <a href="500.html" class="btn btn-primary   ">500</a>
+    <a href="askme.html" class="btn btn-primary   ">askme</a>
+    <a href="en.html" class="btn btn-primary   ">en</a>
+    <a href="ku.html" class="btn btn-primary   ">ku</a></div><br>
+  
     <div class="btn-group btn-group-justified">
     
-    <a href="ku-shortcuts.html" class="btn btn-primary btn-lg">ku-sh</a>
-    <a href="ku-tools.html" class="btn btn-primary btn-lg">ku-tools</a>
-    <a href="tools.html" class="btn btn-primary btn-lg">tools</a>
-    <a href="shortcuts.html" class="btn btn-primary btn-lg">shortcuts</a>
-    <a href="thanks.html" class="btn btn-primary btn-lg">thanks</a></div><br>
+    <a href="ku-shortcuts.html" class="btn btn-primary   ">ku-sh</a>
+    <a href="ku-tools.html" class="btn btn-primary   ">ku-tools</a>
+    <a href="tools.html" class="btn btn-primary   ">tools</a>
+    <a href="shortcuts.html" class="btn btn-primary   ">shortcuts</a>
+    <a href="thanks.html" class="btn btn-primary   ">thanks</a></div><br>
       <div class="btn-group btn-group-justified">
-      <a href="index.html" class="btn btn-primary btn-lg">index</a>
-    <a href="https://www.rahand.ga/plugins/codepen/" class="btn btn-primary btn-lg">CODE</a>
-</div>
-<br>
-<div class="btn-group btn-group-justified">
-  <a href="../plugins/editor/index.html" class="btn btn-primary btn-lg">editor</a>
-  <a href="../plugins/sandbox/index.htmlx" class="btn btn-primary btn-lg">sandbox</a>
+      <a href="index.html" class="btn btn-primary   ">index</a>
+    <a href="https://www.rahand.ga/plugins/codepen/" class="btn btn-primary   ">CODE</a>
+  <a href="../plugins/editor/index.html" class="btn btn-primary   ">editor</a>
+  <a href="../plugins/sandbox/index.htmlx" class="btn btn-primary   ">sandbox</a>
 </div>
 <br><br>
 <!-- the Offcanvas element //-->
