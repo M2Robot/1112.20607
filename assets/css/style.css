@@ -1,6 +1,6 @@
 @font-face {
     font-family: main-font;
-    src: url("../fonts/Comfortaa-Regular.ttf") format("opentype");
+    src: url("../fonts/main.ttf") format("opentype");
 }
 * {
     font-family: "main-font";
