@@ -1,22 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-if (document.cookie.indexOf("admin=true") == -1) {
-  location.href = "login.html"; 
+    <head>
+        <title>Admin Access - Panel</title>
+        <meta charset="utf-8" />
+        <meta name="googlebot" content="noindex" />
+        <meta name="googlebot-news" content="nosnippet" />
+        <meta name="robots" content="follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/logo/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/logo/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/logo/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/logo/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/logo/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/logo/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/logo/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/logo/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/logo/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png" />
+        <link rel="manifest" href="assets/logo/manifest.json" />
+        <meta name="msapplication-TileColor" content="#1f1f1f" />
+        <link rel="canonical" href="https://admin.rahand.ga/index.html" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+            <script src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+            </script>
+            
+            <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+            </script>
+            
+            <script src=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+            </script>
+        <!-- Bootstrap core CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+            @font-face {
+                font-family: main-font;
+                src: url("assets/fonts/main.ttf") format("opentype");
+            }
+            * {
+                font-family: "main-font";
+            }
+            @font-face {
+                font-family: footer;
+                src: url("assets/fonts/footer.otf") format("opentype");
+            }
+            /* scrollbar */
+            /* width */
+            ::-webkit-scrollbar {
+                width: 20px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #4e4e4e;
+                border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #292929;
+            }
+
+            body {
+                background-color: #1f1f1f;
+            }
+
+            /* Text Selector */
+            ::-moz-selection {
+                /* Code for Firefox */
+                color: #fff;
+                background: #000;
+            }
+
+            ::selection {
+                color: #fff;
+                background: #000;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+            }
+
+            .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    padding-top: 30px;
 }
 
-else {
-    location.href = "list.html"; 
-}
-    </script>
-    <script src="/assets/encode.js"></script>
+            .form-signin .checkbox {
+                font-weight: 400;
+            }
 
-</body>
+            .form-signin .form-floating:focus-within {
+                z-index: 2;
+            }
+
+            .form-signin input[type="email"] {
+                margin-bottom: -1px;
+
+            }
+
+            .form-control {
+                border-radius: 10px; 
+                border: solid ;
+}
+            h1.h3.mb-3.fw-normal {
+                color: #fff;
+            }
+            .form-signin .checkbox {
+    font-size: 17px;
+    color: #fff;
+    padding: 15px;
+}
+            .w-100 {
+    width: 100%!important;
+    font-size: 1rem;
+}
+label {
+    font-size: 20px;
+}
+input#email {
+    font-size: 17px;
+    letter-spacing: 0.7px;
+}
+input#password {
+    font-size: 17px;
+    letter-spacing: 0.7px;
+}
+.form-check-input[type=checkbox] {
+    border-radius: 16px;
+}
+img.mb-4 {
+    width: 20vh;
+}
+.font-footer {
+    font-family: "footer";
+}
+#notification {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+}
+		.toast-color {
+            background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    border-width: 0px;
+    border-left: 3px solid red;
+		}
+        .toast-color-success {
+            background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;;
+    border-width: 0px;
+    border-left: 3px solid #03bc00;
+		}
+        small {
+            padding-left: 15px;
+        }
+        .notifi-close {
+            background-color:transparent;
+            border: 0;
+            position: absolute;
+            right: 15px;
+        }
+        i.bi-exclamation-circle-fill {
+    font-size: 1rem;
+    padding-right: 15px;
+    color: #a63737;
+}
+i.bi-check-circle-fill {
+    font-size: 1rem;
+    padding-right: 15px;
+    color: #229f24;
+}
+@media (max-width: 600px) {
+    #notification {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+}
+}
+        </style>
+    </head>
+    <body class="text-center">
+        <script>
+            if (document.cookie.indexOf("admin=true") == -1) {
+                document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                sessionStorage.setItem("admin", "false");
+            } else {
+                location.href = "dashboard.html";
+                sessionStorage.setItem("admin", "true");
+            }
+        </script>
+<script>
+
+// show hide password checkbox
+function passToggle() {
+  var temp = document.getElementById("password");
+  if (temp.type === "password") {
+      temp.type = "text";
+  }
+  else {
+      temp.type = "password";
+  }
+}
+</script>
+<script>
+
+</script>
+        <main class="form-signin">
+            <img class="mb-4" src="assets/imgs/robot_logo.PNG  " alt="MrRobot" title="MrRobot" />
+            <h1 class="h3 mb-3 fw-normal"> MrRobot</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" />
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="toast toast-color error" id="notification"
+            data-delay="3000">
+    <div class="toast-header toast-color">
+        <strong class="mr-auto"><i class="bi bi-exclamation-circle-fill"></i>!Error&nbsp;</strong>
+        <small>We can't find this record. </small>
+    </div>
+</div>
+
+<div class="toast toast-color-success success" id="notification"
+data-delay="3000">
+<div class="toast-header toast-color-success">
+<strong class="mr-auto"><i class="bi bi-check-circle-fill"></i>Success&nbsp;</strong>
+<small>You're about to login. </small>
+</div>
+</div>
+        <div class="checkbox mb-3">
+                
+              <input class="form-check-input" type="checkbox"  onclick="passToggle()" value="" id="flexCheckDefault" />
+              <label class="form-check-label" for="flexCheckDefault">Show Password</label>
+            </div>
+            <input class="w-100 btn btn-lg btn-primary" type="submit" id="login" name="login" value="Login" />
+            <p class="mt-5 mb-3 text-muted">&copy; 2022 Copyright: <a href="" style="text-decoration: none; color: #dc143c;" class="font-footer">rahand</a></p>
+        </main>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+            import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyDryb9PuVyQ3HQcpp0RxvR20gMkTs8fxAg",
+                authDomain: "user-auth-f1a02.firebaseapp.com",
+                databaseURL: "https://user-auth-f1a02-default-rtdb.firebaseio.com",
+                projectId: "user-auth-f1a02",
+                storageBucket: "user-auth-f1a02.appspot.com",
+                messagingSenderId: "1087466517432",
+                appId: "1:1087466517432:web:fb0b11ef280a46d4ffd54d",
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const database = getDatabase(app);
+            const auth = getAuth();
+
+            login.addEventListener("click", (e) => {
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+
+                signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        // Signed in
+                        const user = userCredential.user;
+
+                        const dt = new Date();
+                        update(ref(database, "users/" + user.uid), {
+                            last_login: dt,
+                        });
+
+                        document.cookie = "admin=" + "true;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                        sessionStorage.setItem("admin", "true");
+                        $('.success').toast('show');
+                        setTimeout(function() {window.open("dashboard.html", "_self")}, 3000);
+                        
+                        // ...
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+
+                        document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                        sessionStorage.setItem("admin", "false");
+                        
+                        $('.error').toast('show');
+                        
+                       
+                    });
+            });
+
+            const user = auth.currentUser;
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    const uid = user.uid;
+                } else {
+                }
+            });
+
+        </script>
+        <script>
+          var input = document.getElementById("password");
+          input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+             event.preventDefault();
+             document.getElementById("login").click();
+            }
+          });
+          document.getElementById('login').validity.valid
+
+          </script>
+          <script src="assets/js/encode.js"></script>
+    </body>
 </html>

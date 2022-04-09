@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Admin Access - Panel</title>
+        <meta charset="utf-8" />
+        <meta name="googlebot" content="noindex" />
+        <meta name="googlebot-news" content="nosnippet" />
+        <meta name='robots' content='noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/logo/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/logo/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/logo/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/logo/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/logo/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/logo/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/logo/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="assets/logo/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/logo/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+        <link rel="manifest" href="assets/logo/manifest.json">
+        <meta name="msapplication-TileColor" content="#1f1f1f">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <style>
+        </style>
+    </head>
+    <body style="background-color: #1c1c1c;">
+        <script>
+            if (document.cookie.indexOf("admin=true") == -1) {
+                document.cookie = "admin=" + "false;  expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                location.href = "index.html";
+            } else {
+                sessionStorage.setItem("admin", "true");
+            }
+        </script>
+
+        <button class="nav-link btn btn-outline-primary" id="OpenMenu"><i class="bi bi-list-nested"></i></button>
+
+        <div class="container" style="color: #fafafa;">
+            <img src="assets/logo/favicon-96x96.png" alt="Robot Profile" title="MrRobot">
+            <h2>ACCESS PAGES</h2>
+            <p>backdoor files access :</p>
+
+            <div class="btn-group btn-group-justified">
+                <a href="index.html" class="btn btn-primary">index</a>
+                <a href="plugins/codepen/" class="btn btn-primary">CODE</a>
+                <a href="plugins/editor/" class="btn btn-primary">editor</a>
+                <a href="plugins/sandbox/" class="btn btn-primary">sandbox</a>
+            </div>
+            <br />
+            <br />
+
+            <div class="social_feed"></div>
+
+            <!-- the Offcanvas element //-->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="close btn btn-outline-primary" data-bs-dismiss="offcanvas"><i class="bi bi-x-square-fill"></i></button>
+
+                    <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel">
+                        <a href="#"> <i class="bi bi-diamond-fill"></i> Dashboard</a>
+                    </h5>
+                </div>
+                <hr />
+                <div class="offcanvas-body">
+                    <ul>
+                        <li>
+                            <a href="../"><i class="bi bi-slash-square-fill"></i> index</a>
+                        </li>
+                        <li>
+                            <a href="pages/ytb" target="_blank"><i class="bi bi-youtube"></i> YouTube</a>
+                        </li>
+                        <li>
+                            <a href="../" target="_blank"><i class="bi bi-gear-wide-connected"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="https://bellard.org/jslinux/" target="_blank"><i class="bi bi-terminal-fill"></i> Terminal</a>
+                        </li>
+                        <li>
+                            <a href="https://app.netlify.com/teams/f5ociety/overview?_ga=2.45599012.1406103207.1648950645-253110225.1648950645"><i class="bi bi-server" target="_blank"></i> Server</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/M2Robot?tab=repositories" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+                        </li>
+
+                        <li>
+                            <a href="https://analytics.google.com/analytics/web/#/p309801897/realtime/overview?params=_u..nav%3Dmaui" target="_blank"><i class="bi bi-reception-4"></i> analytics</a>
+                        </li>
+                    </ul>
+
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-outline-dark" onclick="logout()"><i class="bi bi-box-arrow-left"></i> LOGOUT</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                var myOffcanvas = document.getElementById("offcanvasExample");
+                var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+                document.getElementById("OpenMenu").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    bsOffcanvas.toggle();
+                });
+            });
+        </script>
+        <script>
+            function logout() {
+                document.cookie = "admin=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+                localStorage.clear();
+                sessionStorage.clear();
+                location.href = "index.html";
+            }
+        </script>
+
+        <div id="webcounter">
+            <img src="https://www.webfreecounter.com/hit.php?id=grqdnna&nd=6&style=6" border="0" alt="Web Counter" class="wCounter" />
+        </div>
+    </body>
+</html>
