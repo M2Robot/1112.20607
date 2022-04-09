@@ -6,7 +6,7 @@
 /kurdish        https://rahand.ga/ku
 /tools          https://rahand.ga/en/tools
 /shortcuts      https://rahand.ga/en/shortcuts
-/admin      /public/403.html
+/admin      https://rahand.ga/public/403
 /priv       https://admin.rahand.ga/
-/assets/data.js      /public/403.html
-/assets/*           /public/403.html
+/assets/data.js      https://rahand.ga/public/403
+/assets/*           https://rahand.ga/public/403
