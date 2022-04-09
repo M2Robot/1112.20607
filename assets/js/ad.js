@@ -23,7 +23,7 @@ $(document).ready(function () {
       <p>We use advertisements to keep our website online, could you please whitelist our website, thanks!</p>
       <a href="" class="submitBtn">Okay</a>
   `;
-                    document.body.appendChild(adp);
+                    document.body.appendChild(adp);     
                     adp.querySelector("a").onclick = (e) => {
                         e.preventDefault();
                         if (isBlocked) {
