@@ -1,0 +1,804 @@
+:root {
+    --light-color: #fafafa;
+    --dark-color: #1f1f1f;
+    --body-color: #e0e0e0;
+    --box-color: white;
+}
+
+.version {
+    font-size: 15px;
+    position: relative;
+    left: 10px;
+    font-weight: 100;
+}
+
+.globalTargetList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+}
+.globalTargetList li .card {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 #0000000f, 0 2px 5px 0 #00000033;
+    border-radius: 3px;
+}
+.globalTargetList li h4 {
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+}
+.globalTargetList li h6 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    opacity: 0.6;
+}
+.globalTargetList li p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.globalSearchResultNoFoundFeedback {
+    font-size: 20px;
+    padding: 20px;
+    color: #999;
+    text-align: center;
+}
+
+/* Search Bar */
+/*----- Start Dark Background-----*/
+center#search_dark {
+    margin-top: 5%;
+    color: #007bff;
+}
+
+#search_dark input[type="text"] {
+    background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-white_zps878b551d.png) no-repeat 15px 15px #444;
+    border: 0 none;
+    font: bold 12px Arial, Helvetica, Sans-serif;
+    color: #fff;
+    width: 15rem;
+    height: 6vh;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+#search_dark input[type="text"]:focus {
+    width: 17rem;
+    height: 7vh;
+}
+/*----- End Dark Background-----*/
+
+/*----- Start Dark Background and Light Hover-----*/
+#search_darklight {
+    margin-top: 7%;
+}
+#search_darklight input[type="text"] {
+    background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-white_zps878b551d.png) no-repeat 15px 10px #444;
+    border: 0 none;
+    font: bold 12px Arial, Helvetica, Sans-serif;
+    color: #fff;
+    width: 12rem;
+    height: 5vh;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search_darklight input[type="text"]:focus {
+    background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-dark_zps465daf17.png) no-repeat 15px 10px #fcfcfc;
+    color: #6a6f75;
+    width: 12rem;
+    height: 5vh;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*----- End Dark Background and Light Hover-----*/
+
+footer p {
+    margin-top: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: medium;
+
+    line-height: 2rem;
+    text-align: center;
+}
+footer {
+    align-items: center;
+    bottom: 0;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-color);
+}
+.btn-warning {
+    color: #1f1f1f;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.fa-solid,
+.fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.bi-arrow-down-square-fill::before {
+    content: "\f125";
+    cursor: default;
+}
+nav {
+    font-family: "SF Pro Display", BlinkMacSystemFont, -apple-system, SF UI Text, Helvetica Neue, sans-serif !important;
+    background-color: #161616;
+}
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    padding-left: 5%;
+}
+body > div.pricing-header {
+    background: linear-gradient(135deg, #959595 25%, transparent 25%) -50px 0, linear-gradient(225deg, #4d4b4b 25%, transparent 25%) -50px 0, linear-gradient(315deg, #dddddd 25%, transparent 25%),
+        linear-gradient(45deg, #838383 25%, transparent 25%);
+    background-size: 100px 100px;
+    text-shadow: 4px 2px 8px #000;
+}
+nav a,
+button {
+    color: #fff;
+}
+.nav-link.disabled {
+    color: #9b9b9b;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+    color: #fff;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-left: 30px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+    color: #0cb3f9;
+}
+.card-body p,
+.card-body h5 {
+    text-align: center;
+    direction: ltr;
+}
+svg {
+    fill: #fff;
+}
+div.pricing-header {
+    color: #fff;
+}
+svg.icon {
+    background: linear-gradient(45deg, #fd0000, #ba00b4);
+}
+.ara {
+    direction: ltr;
+}
+nav a[href]:hover {
+    color: #9c9c9c;
+}
+
+nav {
+    font-family: "SF Pro Display", BlinkMacSystemFont, -apple-system, SF UI Text, Helvetica Neue, sans-serif !important;
+    background-color: #161616;
+}
+body > div.pricing-header {
+    background: linear-gradient(135deg, #959595 25%, transparent 25%) -50px 0, linear-gradient(225deg, #4d4b4b 25%, transparent 25%) -50px 0, linear-gradient(315deg, #dddddd 25%, transparent 25%),
+        linear-gradient(45deg, #838383 25%, transparent 25%);
+    background-size: 100px 100px;
+    text-shadow: 4px 2px 8px #000;
+}
+.nav-link.disabled {
+    color: #9b9b9b;
+}
+.card-body p,
+.card-body h5 {
+    text-align: center;
+    direction: ltr;
+}
+svg {
+    fill: #fff;
+}
+div.pricing-header {
+    color: #fff;
+}
+svg.icon {
+    background: linear-gradient(45deg, #fd0000, #ba00b4);
+}
+.ara {
+    direction: ltr;
+}
+nav a[href]:hover {
+    color: #9c9c9c;
+}
+nav img {
+    vertical-align: middle;
+    border-style: none;
+    margin: 20%;
+    height: 4vh;
+}
+.navbar-nav {
+    margin-left: 5%;
+}
+a,
+button {
+    color: rgb(0, 0, 0);
+}
+
+*.lock {
+    overflow: hidden;
+}
+
+body {
+    background-color: #1f1f1f;
+    transition: ease-in-out 0.46s;
+}
+
+button.mode {
+    all: initial;
+}
+
+button.mode {
+    position: absolute;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 75px;
+    width: auto;
+}
+
+[class$="icon"] > a svg {
+    fill: #9e9e9e;
+    transition: ease-out 100ms;
+}
+
+[class^="mode"] button svg:hover {
+    transition: ease-out 100ms;
+}
+
+[class="mode"] button > svg {
+    fill: var(--text-color);
+    transition: ease-in-out 0.96s;
+}
+
+.list-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 5rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.card.open {
+    border-radius: 0;
+}
+
+.card.hover,
+.card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    transition: border-radius 0.15s ease;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card.open .card-content {
+    z-index: 500 !important;
+    background: #fff;
+    border-radius: 0px;
+    cursor: default;
+}
+
+.banner-holder {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    position: relative;
+    height: 20vh;
+    width: 100%;
+    padding: 15px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card.open .banner {
+    height: 45vh;
+    border-radius: 0;
+}
+
+.content-holder {
+    max-width: 600px;
+    padding: 0;
+    z-index: 1;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.card.open .content-holder {
+    overflow: auto;
+}
+
+.inner-content {
+    top: 20vh;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+    line-height: 0;
+    border-style: solid;
+    border-color: #1f1f1f;
+    border-width: 1px;
+}
+
+.card.open .inner-content {
+    top: 40vh;
+    padding-bottom: env(safe-area-inset-bottom); /* for iPhone X */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: solid 2px #fafafa;
+}
+
+.info-holder {
+    display: flex;
+    align-items: center;
+}
+
+.date-category {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.5;
+    margin-bottom: 0;
+    flex: 1;
+    margin: 0 1.4rem 0 0;
+}
+
+.title {
+    position: relative;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.6;
+}
+
+.card:not(.open) .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 4.2em;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: 45px;
+    width: 45px;
+    line-height: 27px;
+    background: rgb(31 31 31);
+    border-radius: 50%;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in-out;
+}
+.close-btn {
+    position: absolute;
+    line-height: 27px;
+    background: rgb(31 31 31);
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+    padding: 5px;
+}
+.card.open .close-btn {
+    z-index: 600;
+    opacity: 0.9;
+    visibility: visible;
+    right: 3%;
+    top: 3%;
+    cursor: not-allowed;
+    color: #e1e4e3;
+}
+
+.card.open .content-holder::-webkit-scrollbar {
+    width: 0px;
+}
+h2 {
+    font-size: 20px;
+}
+label {
+    position: relative;
+    display: inline-block;
+}
+label:before {
+    content: "";
+    height: 31px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    width: 22px;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    pointer-events: none;
+    display: block;
+}
+label:after {
+    content: " ";
+    position: absolute;
+    right: 15px;
+    top: 46%;
+    margin-top: -3px;
+    z-index: 2;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.9px 4px 0 4px;
+    border-color: #aaa transparent transparent transparent;
+    pointer-events: none;
+}
+label select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 30px 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    line-height: 36px;
+    height: 36px;
+    background: #fff;
+    margin: 0 5px 5px 0;
+}
+select::-ms-expand {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+a:hover {
+    color: #0cb3f9;
+}
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.item-btns i:hover {
+    background-color: #bababa;
+    border-radius: 3px;
+}
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgb(186 216 248 / 50%);
+    background: #000;
+    border-color: #fafafa;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #000;
+    border-color: #fafafa;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 7% 37% 7%;
+    text-transform: uppercase;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #00000052;
+}
+.action-btn button {
+    color: #fafafa;
+    background-color: rgb(61 60 60);
+    font-size: 1.5rem;
+}
+.action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding-right: 48%;
+    padding-left: 48%;
+    padding-bottom: 5%;
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #292929;
+}
+::-moz-selection {
+    /* Code for Firefox */
+    color: #fafafa;
+    background: #000;
+}
+
+::selection {
+    color: #fafafa;
+    background: #000;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 0px rgb(255 255 255 / 10%);
+}
+button.btn.btn-primary:hover {
+    background-color: #0e0e0e;
+    border-color: #fafafa;
+}
+.inner-content {
+    background-color: #3d3c3c;
+    border-style: solid;
+    border-width: 1px;
+}
+.fa-solid,
+.fas {
+    color: #fafafa;
+}
+.bi-arrow-down-square-fill::before {
+    color: #fafafa;
+}
+.item-btns i:hover {
+    background-color: #000;
+    border-radius: 3px;
+}
+.info-holder {
+    color: #fafafa;
+}
+a {
+    color: #fafafa;
+}
+.version {
+    color: #fafafa;
+}
+p {
+    color: #fafafa;
+}
+/*  media query for mobile   */
+@media (max-width: 600px) {
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 18px;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        margin: 7% 31% 7%;
+    }
+    nav img {
+        vertical-align: middle;
+        height: 3vh;
+        border-style: none;
+        margin: 20%;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid #ffffff00;
+        border-radius: 0.25rem;
+    }
+    #search_dark input[type="text"] {
+        background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-white_zps878b551d.png) no-repeat 15px 15px #444;
+        border: 0 none;
+        font: bold 12px Arial, Helvetica, Sans-serif;
+        color: #fff;
+        width: 15rem;
+        height: 6vh;
+        padding: 6px 15px 6px 35px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
+        -webkit-box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -webkit-transition: all 0.7s ease 0s;
+        -moz-transition: all 0.7s ease 0s;
+        -o-transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;
+    }
+    #search_dark input[type="text"]:focus {
+        width: 17rem;
+        height: 6vh;
+    }
+    i.fa-solid.fa-link {
+        cursor: copy;
+        margin-left: 35%;
+    }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    #search_dark input[type="text"] {
+        background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-white_zps878b551d.png) no-repeat 15px 15px #444;
+        border: 0 none;
+        font: bold 12px Arial, Helvetica, Sans-serif;
+        color: #fff;
+        width: 15rem;
+        height: 5vh;
+        padding: 6px 15px 6px 35px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
+        -webkit-box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -webkit-transition: all 0.7s ease 0s;
+        -moz-transition: all 0.7s ease 0s;
+        -o-transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;
+    }
+}
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+    #search_dark input[type="text"] {
+        background: url(http://i1078.photobucket.com/albums/w498/molenmaulana/search-white_zps878b551d.png) no-repeat 15px 15px #444;
+        border: 0 none;
+        font: bold 12px Arial, Helvetica, Sans-serif;
+        color: #fff;
+        width: 15rem;
+        height: 6vh;
+        padding: 6px 15px 6px 35px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
+        -webkit-box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgb(255 255 255 / 10%), 0 1px 3px rgb(0 0 0 / 20%) inset;
+        -webkit-transition: all 0.7s ease 0s;
+        -moz-transition: all 0.7s ease 0s;
+        -o-transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1f1f1f;
+    }
+    footer p {
+        color: var(--light-color);
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #e9e9e969;
+    }
+    footer p {
+        color: var(--dark-color);
+    }
+}
