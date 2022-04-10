@@ -267,7 +267,7 @@
        transition-property: transform, opacity;
        transition-timing-function: ease;
        transition-duration: 0.4s;
-       background-color: #0000000;
+       background-color: #0000;
        content: "";
        transform: translate(102px, 0);
      }

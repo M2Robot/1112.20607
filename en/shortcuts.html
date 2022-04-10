@@ -76,6 +76,13 @@
 
 
       <style>
+                              @font-face {
+                font-family: main-font;
+                src: url("../assets/fonts/Comfortaa-Regular.ttf") format("opentype");
+            }
+            * {
+                font-family: "main-font";
+            }
          .version {
             font-size: 15px;
             position: relative;
@@ -395,7 +402,6 @@ transition: ease-out 100ms;
 
 
 [class^="mode"] button svg:hover {
-fill: #6b6767; var(--text-color);
 transition: ease-out 100ms;
 }
 
@@ -1196,7 +1202,7 @@ button.btn.btn-primary.btn-circle.btn-sm.left {
             
           </div>
          <footer class="fixed-footer">
-            <p>© 2022 Copyright: <a href="" style="text-decoration: none; color: #dc143c;">rahand.ga</a></p>
+            <p>© 2022 Copyright: <a href="" style="text-decoration: none; color: #dc143c;" class="font-footer">rahand</a></p>
          </footer>
          <button type="button" class="btn btn-primary btn-circle btn-sm left" onclick="window.location.href='/en/'";><i class="bi bi-chevron-left"></i></button>
          <button type="button" class="btn btn-primary btn-circle btn-sm repeat" onclick="window.location.reload()";><i class="bi bi-arrow-repeat"></i></button>
