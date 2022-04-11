@@ -288,10 +288,13 @@
      .hamburger__hidden::before {
        top: -13px;
      }
+     .hamburger__hidden::after {
+       top: 13px;
+     }
      @media (max-width: 600px) {
 
-     .hamburger__inner::after {
-      top: 13px;
-      height: 2px;
-    }
-  }
+      .hamburger__inner::after {
+       top: 13px;
+       height: 2px;
+     }
+   }        
