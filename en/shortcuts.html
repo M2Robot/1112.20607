@@ -55,7 +55,7 @@
       <link rel="manifest" href="/assets/icons/shortcuts/manifest.json">
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="/assets/icons/shortcuts/ms-icon-144x144.png">
-      <meta name="theme-color" content="#1f1f1f">
+      <meta name="theme-color" content="#161616" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -97,24 +97,35 @@
                        <a class="nav-link" href="/en/">Home <span class="sr-only">(current)</span></a>
                    </li>
                    <li class="nav-item">
-                       <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">ipa</a>
+                       <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Shortcuts</a>
                    </li>
+                   <li>
+                    <!-- search input -->
+<div id="search_dark">
+   <input class="globalInputSearch" name="q" type="text" size="30" placeholder="Search item .." />
+   <!-- feedback -->
+   <div class="globalSearchResultNoFoundFeedback" aria-live="polite">
+       <h1 class="feedbck-h1">Nothing found.</h1>
+       <p>We are sorry, but we didn't find any items matching your search.</p>
+   </div>
+</div>
+               </li>
                </ul>
            </div>
        </nav>
    </header>
-   <!-- search input -->
-   <center id="search_dark">
-       <input class="globalInputSearch" name="q" type="text" size="30" placeholder="Search item .." />
-       <!-- feedback -->
-       <div class="globalSearchResultNoFoundFeedback" aria-live="polite">
-           <h1>Nothing found.</h1>
-           <p>We are sorry, but we didn't find any items matching your search.</p>
-       </div>
-   </center>
 
-   <!--   return to top button   -->
-          
+               <!--   tite   -->
+               <div class="page-title">
+                <h1 class="page-title-h1">
+                    iOS Shortcuts
+                </h1>
+                <p class="page-body-p">
+                    A shortcut is a quick way to get one or more tasks done with your ios apps.
+                    <a href="https://support.apple.com/guide/shortcuts/welcome/ios" target="_blank" rel="noreferrer nofollow">read more</a>
+                </p>
+            </div>
+
          <div class="cards-list">
             <div class="card a Utilities default">
                <div class="card-content">
@@ -127,8 +138,8 @@
                            <div class="date-category">MAY 09 2021 / Utilities</div>
                            <div class="item-btns">
                             
-                            <button type=button onclick="item1()"><i class="fa-solid fa-link"></i></button>
-                              <a href="https://shareshortcuts.com/download/1283-apps-configuration.html" target="_blank" rel="noopener noreferrer"> <button type="button"><i class="bi bi-arrow-down-square-fill"></i></button></a>
+                            <button type=button onclick="item1()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
+                              <a href="https://shareshortcuts.com/download/1283-apps-configuration.html" target="_blank" rel="noopener noreferrer"> <button type="button"> <img src="../assets/icons/i/download.svg" alt="download" title="Download" /></button></a>
                            </div>
                         </div>
                         <h2 class="title"><a href="https://shareshortcuts.com/shortcuts/1283-apps-configuration.html" target="_blank">Apps Configuration</a> &nbsp; <small class="version">v1.0.4</small></h2>
@@ -142,7 +153,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card b API default">
@@ -155,9 +166,9 @@
                         <div class="info-holder">
                            <div class="date-category">DEC 09 2021 / API</div>
                            <div class="item-btns">
-                            <button class="cpk" type=button onclick="item2()"><i class="fa-solid fa-link"></i></button>
+                            <button class="cpk" type=button onclick="item2()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1542-myip.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -169,7 +180,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card c s-network default">
@@ -182,9 +193,9 @@
                         <div class="info-holder">
                            <div class="date-category">MAR 22 2021 / Social</div>
                            <div class="item-btns">
-                            <button type=button onclick="item3()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item3()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1503-robodown.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -196,7 +207,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card d Utilities default">
@@ -209,9 +220,9 @@
                         <div class="info-holder">
                            <div class="date-category">SEP 10 2021 / Utilities</div>
                            <div class="item-btns">
-                            <button type=button onclick="item4()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item4()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1500-robo-shorten.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -223,7 +234,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card e Utilities default">
@@ -236,9 +247,9 @@
                         <div class="info-holder">
                            <div class="date-category">AUG 01 2021 / Utilities</div>
                            <div class="item-btns">
-                            <button type=button onclick="item5()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item5()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1474-website-translator.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -250,7 +261,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card f Utilities default">
@@ -263,9 +274,9 @@
                         <div class="info-holder">
                            <div class="date-category">MAR 13 2020 / Utilities</div>
                            <div class="item-btns">
-                            <button type=button onclick="item6()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item6()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1469-terminal.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -277,7 +288,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card g s-network default">
@@ -290,9 +301,9 @@
                         <div class="info-holder">
                            <div class="date-category">APR 07 2021 / Social</div>
                            <div class="item-btns">
-                            <button type=button onclick="item7()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item7()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1285-robopass.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -304,7 +315,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>
             <div class="card h Utilities default">
@@ -317,9 +328,9 @@
                         <div class="info-holder">
                            <div class="date-category">MAY 09 2021 / Utilities</div>
                            <div class="item-btns">
-                            <button type=button onclick="item8()"><i class="fa-solid fa-link"></i></button>
+                            <button type=button onclick="item8()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                             <a href="https://shareshortcuts.com/download/1351-safari.html" target="_blank" rel="noopener noreferrer"> <button type="button">
-                                 <i class="bi bi-arrow-down-square-fill"></i>
+                                  <img src="../assets/icons/i/download.svg" alt="download" title="Download" />
                               </button></a>
                            </div>
                         </div>
@@ -333,406 +344,33 @@
                         </div>
                      </div>
                   </div>
-                  <div class="close-btn"><i class="fa fa-times"></i></div>
+                  <div class="close-btn"><img class="xClose" src="../assets/icons/i/close.svg" alt="close-btn" title="close the window banner" /></div>
                </div>
             </div>            
             
           </div>
-         <footer class="fixed-footer">
+          <div class="action-btn">
+            <button type="button" class="btn btn-primary btn-circle btn-sm left" onclick="window.location.href='/en/'" ;><i class="bi bi-chevron-left"></i></button>
+            <button type="button" class="btn btn-primary btn-circle btn-sm repeat" onclick="window.location.reload()" ;><i class="bi bi-arrow-repeat"></i></button>
+        </div>
+        <footer class="fixed-footer">
             <p>© 2022 Copyright: <a href="" style="text-decoration: none; color: #dc143c;" class="font-footer">rahand</a></p>
-         </footer>
-         <button type="button" class="btn btn-primary btn-circle btn-sm left" onclick="window.location.href='/en/'";><i class="bi bi-chevron-left"></i></button>
-         <button type="button" class="btn btn-primary btn-circle btn-sm repeat" onclick="window.location.reload()";><i class="bi bi-arrow-repeat"></i></button>
-
-      </div>
+        </footer>
+    </div>
 
 
-        <script type="text/javascript">
-            $("img").attr("draggable", false);
-        </script>
-        <script id="rendered-js">
-            var expandingAnimationTiming = 400;
-            var collapsingAnimationTiming = 200;
+        <script src="../assets/js/cards.js"></script>
 
-            /* Extends jQuery animate easing */
-            $.easing = Object.assign({}, $.easing, {
-                easeOutBack: function (x, t, b, c, d, s) {
-                    if (s == undefined) s = 1.70158;
-                    return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
-                },
-            });
-
-            /* Function to expand cards */
-            function expandElement(elementToExpand) {
-                // Adds class 'open' to help with styling
-                elementToExpand.parents(".card").addClass("open");
-
-                // Prevents 'body' scroll
-                $("body").addClass("lock");
-
-                // freeze the current scroll position of the background page expand-wrapper
-                var elementOffset = $(".list-wrapper").offset();
-                var elementScrollTop = $("body").scrollTop();
-                var netOffset = elementOffset.top - elementScrollTop;
-                var expandPosition = $(".list-wrapper").offset();
-                var expandTop = expandPosition.top;
-                var expandLeft = expandPosition.left;
-                var expandWidth = $(".list-wrapper").outerWidth();
-                var expandHeight = $(".list-wrapper").outerHeight();
-
-                $(".list-wrapper").css({
-                    top: netOffset,
-                    position: "fixed",
-                    overflow: "hidden",
-                    "z-index": "11",
-                });
-
-                // convert the expand-item to fixed position without moving it
-                elementToExpand.css({
-                    top: elementToExpand.offset().top - $("body").scrollTop(),
-                    left: elementToExpand.offset().left,
-                    height: elementToExpand.height(),
-                    width: elementToExpand.width(),
-                    "max-width": expandWidth,
-                    position: "fixed",
-                });
-
-                // Changes height of banner
-                var expandedHeight = elementToExpand.find(".banner").data("height-expanded");
-                elementToExpand.find(".banner").animate(
-                    {
-                        height: expandedHeight,
-                    },
-
-                    expandingAnimationTiming,
-                    "easeOutBack"
-                );
-
-                // Changes position of content
-                var expandedPosition = elementToExpand.find(".inner-content").data("position-expanded");
-                elementToExpand.find(".inner-content").animate(
-                    {
-                        top: expandedPosition,
-                    },
-
-                    expandingAnimationTiming,
-                    "easeOutBack"
-                );
-
-                // start expand-item animation to the expand wrapper
-                // expand the element with class .about-tile-bg-image
-                elementToExpand.animate(
-                    {
-                        left: expandLeft,
-                        top: expandTop,
-                        height: expandHeight,
-                        width: expandWidth,
-                        "max-width": expandWidth,
-                    },
-
-                    expandingAnimationTiming, // animation timing in millisecs
-                    "easeOutBack", //animation easing
-                    function () {
-                        elementToExpand.css({
-                            right: 0,
-                            bottom: 0,
-                            width: "auto",
-                            height: "auto",
-                        });
-
-                        elementToExpand.find(".banner-holder").css({
-                            position: "fixed",
-                        });
-                    }
-                );
-            }
-
-            /* Function to collapse cards */
-            function collapseElement(collapseButton) {
-                // find the element to collapse
-                var elementToCollpseParent = collapseButton.parents(".card");
-                var elementToCollpse = elementToCollpseParent.find(".card-content");
-
-                // find the location of the placeholder
-                var elementToCollpsePlaceholder = elementToCollpse.parents(".card");
-                var elementToCollpsePlaceholderTop = elementToCollpsePlaceholder.offset().top - $("body").scrollTop();
-                var elementToCollpsePlaceholderLeft = elementToCollpsePlaceholder.offset().left;
-                var elementToCollpsePlaceholderHeight = elementToCollpsePlaceholder.outerHeight();
-                var elementToCollpsePlaceholderWidth = elementToCollpsePlaceholder.outerWidth();
-
-                elementToCollpse.find(".banner-holder").css({
-                    position: "absolute",
-                });
-
-                // convert the width and height to numeric values
-                elementToCollpse.css({
-                    right: "auto",
-                    bottom: "auto",
-                    width: elementToCollpse.outerWidth(),
-                    height: elementToCollpse.outerHeight(),
-                });
-
-                $(".list-wrapper").css({
-                    top: 0,
-                    position: "absolute",
-                    overflow: "auto",
-                    "z-index": "1",
-                });
-
-                // Changes height of banner
-                var collapsedHeight = elementToCollpse.find(".banner").data("height");
-                elementToCollpse.find(".banner").animate(
-                    {
-                        height: collapsedHeight,
-                    },
-
-                    collapsingAnimationTiming,
-                    "linear"
-                );
-
-                // Changes position of content
-                var collapsedPosition = elementToCollpse.find(".inner-content").data("position");
-                elementToCollpse.find(".inner-content").animate(
-                    {
-                        top: collapsedPosition,
-                    },
-
-                    collapsingAnimationTiming,
-                    "linear"
-                );
-
-                elementToCollpse.animate(
-                    {
-                        left: elementToCollpsePlaceholderLeft,
-                        top: elementToCollpsePlaceholderTop,
-                        height: elementToCollpsePlaceholderHeight,
-                        width: elementToCollpsePlaceholderWidth,
-                    },
-
-                    collapsingAnimationTiming, // animation timing in millisecs
-                    "linear", //animation easing
-                    function () {
-                        // Removes class 'open'
-                        elementToCollpseParent.removeClass("open");
-
-                        elementToCollpse.css({
-                            position: "relative",
-                            top: "auto",
-                            left: "auto",
-                            width: "100%",
-                            height: "100%",
-                        });
-                    }
-                );
-
-                // Stops preventing 'body' scroll
-                $("body").removeClass("lock");
-            }
-
-            function setCardHeight() {
-                $(".card ").each(function (index, element) {
-                    var slideHeight = $(element).find(".banner-holder").outerHeight();
-                    var containerHeight = $(element).find(".inner-content").outerHeight();
-                    var contentHeight = slideHeight + containerHeight;
-
-                    $(element).css({
-                        height: contentHeight,
-                    });
-                });
-            }
-
-            function attachListeners() {
-                $(document)
-                    .on("click", ".card-content", function () {
-                        if ($(this).parents(".card").hasClass("open")) {
-                            return;
-                        }
-                        expandElement($(this));
-                    })
-                    .on("click", ".card .close-btn", function (event) {
-                        event.stopPropagation();
-                        collapseElement($(this));
-                    })
-                    .on("touchstart", ".card", function () {
-                        $(this).addClass("hover");
-                    })
-                    .on("touchend touchmove touchcancel", ".card", function () {
-                        $(this).removeClass("hover");
-                    });
-            }
-
-            function initialiseCards() {
-                attachListeners();
-                setCardHeight();
-            }
-
-            initialiseCards();
-            //# sourceURL=pen.js
-        </script>
 
       <!--   cp - btn   -->
+<script src="../assets/js/cp-shortcuts.js"></script>
 
-      <script type="text/javascript">
-        function item1(){
-        let val = 'https://shareshortcuts.com/download/1283-apps-configuration.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item2(){
-        let val = 'https://shareshortcuts.com/download/1542-myip.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item3(){
-        let val = 'https://shareshortcuts.com/download/1503-robodown.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item4(){
-        let val = 'https://shareshortcuts.com/download/1500-robo-shorten.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item5(){
-        let val = 'https://shareshortcuts.com/download/1474-website-translator.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item6(){
-        let val = 'https://shareshortcuts.com/download/1469-terminal.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item7(){
-        let val = 'https://shareshortcuts.com/download/1285-robopass.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-  function item8(){
-        let val = 'https://shareshortcuts.com/download/1351-safari.html';
-    const selBox = document.createElement('textarea');
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert('url copied to clipboard');
-  }
-    </script>
-
-</script>
-
-<script>
-    function sortList() {
-        var list, i, switching, b, shouldSwitch;
-        list = document.getElementById("card-script");
-        switching = true;
-        /* Make a loop that will continue until
-no switching has been done: */
-        while (switching) {
-            // start by saying: no switching is done:
-            switching = false;
-            b = list.getElementsByTagName("h2");
-            // Loop through all list-items:
-            for (i = 0; i < b.length - 1; i++) {
-                // start by saying there should be no switching:
-                shouldSwitch = false;
-                /* check if the next item should
-switch place with the current item: */
-                if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-                    /* if next item is alphabetically
-lower than current item, mark as a switch
-and break the loop: */
-                    shouldSwitch = true;
-                    break;
-                }
-            }
-            if (shouldSwitch) {
-                /* If a switch has been marked, make the switch
-and mark the switch as done: */
-                b[i].parentNode.insertBefore(b[i + 1], b[i]);
-                switching = true;
-            }
-        }
-    }
-</script>
+<script src="../assets/js/cards-sort.js"></script>
 
 <!-- Custom scripts -->
 
-<script type="text/babel">
-    $(".globalSearchResultNoFoundFeedback").hide();
-    $(".globalInputSearch").keyup(function () {
-        // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val(),
-            count = 0;
+<script src="../assets/js/err-feedback.js"></script>
 
-        if (count == 0) {
-            $(".globalSearchResultNoFoundFeedback").hide();
-        }
-
-        // Loop through the comment list
-        $(".globalTargetList .card-content").each(function () {
-            // If the list item does not contain the text phrase fade it out
-
-            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).hide(); // MY CHANGE
-                if (count == 0) {
-                    $(".globalSearchResultNoFoundFeedback").show();
-                } else {
-                    $(".globalSearchResultNoFoundFeedback").hide();
-                }
-                // Show the list item if the phrase matches and increase the count by 1
-            } else {
-                $(this).show(); // MY CHANGE
-                count++;
-            }
-        });
-    });
-</script>
-
-<script src="../assets/js/encode.js"></script>
+<script src="..//assets/js/encode.js"></script>
 </body>
 </html>

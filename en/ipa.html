@@ -98,22 +98,34 @@
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">ipa</a>
                             </li>
+                            <li>
+                                 <!-- search input -->
+            <div id="search_dark">
+                <input class="globalInputSearch" name="q" type="text" size="30" placeholder="Search item .." />
+                <!-- feedback -->
+                <div class="globalSearchResultNoFoundFeedback" aria-live="polite">
+                    <h1 class="feedbck-h1">Nothing found.</h1>
+                    <p class="feedbck-p">We are sorry, but we didn't find any items matching your search.</p>
+                </div>
+            </div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </header>
-            <!-- search input -->
-            <center id="search_dark">
-                <input class="globalInputSearch" name="q" type="text" size="30" placeholder="Search item .." />
-                <!-- feedback -->
-                <div class="globalSearchResultNoFoundFeedback" aria-live="polite">
-                    <h1>Nothing found.</h1>
-                    <p>We are sorry, but we didn't find any items matching your search.</p>
-                </div>
-            </center>
+           
 
-            <!--   return to top button   -->
-
+            <!--   tite   -->
+            <div class="page-title">
+                <h1 class="page-title-h1">
+                    iOS App Store Package
+                </h1>
+                <p class="page-body-p">
+                    an iOS application archive file which stores an iOS app. 
+                    <a href="https://en.wikipedia.org/wiki/.ipa" target="_blank" rel="noreferrer nofollow">read more</a>
+                </p>
+            </div>
+            
             <div class="cards-list">
                 <div class="card a Utilities default">
                     <div class="card-content">
@@ -127,11 +139,8 @@
                                     <div class="item-btns">
                                         <button type="button" onclick="item1()"><img src="../assets/icons/i/cp-url.svg" alt="copy-url" title="Copy doanloading url" /></button>
                                         <a
-                                            href="https://mega.nz/file/FlVQHa7a#w5ODKUBq3vpiatwmTw6uS6pqgD7ojmV-Lz_hm_wH-OA
-                              "
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
+                                            href="https://mega.nz/file/FlVQHa7a#w5ODKUBq3vpiatwmTw6uS6pqgD7ojmV-Lz_hm_wH-OA" target="_blank"
+                                            rel="noopener noreferrer">
                                             <button type="button"><img src="../assets/icons/i/download.svg" alt="download" title="Download" /></button>
                                         </a>
                                     </div>
@@ -142,11 +151,7 @@
                                         YouTube is the biggest video-sharing platforms on the internet at the moment. YouTube offers an app for iOS which provides a seamless and enjoyable experience watching videos on your iPhone.
                                     </p>
                                     <a
-                                        href="https://mega.nz/file/FlVQHa7a#w5ODKUBq3vpiatwmTw6uS6pqgD7ojmV-Lz_hm_wH-OA
-                           "
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
+                                        href="https://mega.nz/file/FlVQHa7a#w5ODKUBq3vpiatwmTw6uS6pqgD7ojmV-Lz_hm_wH-OA"  target="_blank">
                                         <button type="button" class="btn btn-primary">Download</button>
                                     </a>
                                 </div>
@@ -483,433 +488,18 @@
             </footer>
         </div>
 
-        <script type="text/javascript">
-            $("img").attr("draggable", false);
-        </script>
-        <script id="rendered-js">
-            var expandingAnimationTiming = 400;
-            var collapsingAnimationTiming = 200;
-
-            /* Extends jQuery animate easing */
-            $.easing = Object.assign({}, $.easing, {
-                easeOutBack: function (x, t, b, c, d, s) {
-                    if (s == undefined) s = 1.70158;
-                    return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
-                },
-            });
-
-            /* Function to expand cards */
-            function expandElement(elementToExpand) {
-                // Adds class 'open' to help with styling
-                elementToExpand.parents(".card").addClass("open");
-
-                // Prevents 'body' scroll
-                $("body").addClass("lock");
-
-                // freeze the current scroll position of the background page expand-wrapper
-                var elementOffset = $(".list-wrapper").offset();
-                var elementScrollTop = $("body").scrollTop();
-                var netOffset = elementOffset.top - elementScrollTop;
-                var expandPosition = $(".list-wrapper").offset();
-                var expandTop = expandPosition.top;
-                var expandLeft = expandPosition.left;
-                var expandWidth = $(".list-wrapper").outerWidth();
-                var expandHeight = $(".list-wrapper").outerHeight();
-
-                $(".list-wrapper").css({
-                    top: netOffset,
-                    position: "fixed",
-                    overflow: "hidden",
-                    "z-index": "11",
-                });
-
-                // convert the expand-item to fixed position without moving it
-                elementToExpand.css({
-                    top: elementToExpand.offset().top - $("body").scrollTop(),
-                    left: elementToExpand.offset().left,
-                    height: elementToExpand.height(),
-                    width: elementToExpand.width(),
-                    "max-width": expandWidth,
-                    position: "fixed",
-                });
-
-                // Changes height of banner
-                var expandedHeight = elementToExpand.find(".banner").data("height-expanded");
-                elementToExpand.find(".banner").animate(
-                    {
-                        height: expandedHeight,
-                    },
-
-                    expandingAnimationTiming,
-                    "easeOutBack"
-                );
-
-                // Changes position of content
-                var expandedPosition = elementToExpand.find(".inner-content").data("position-expanded");
-                elementToExpand.find(".inner-content").animate(
-                    {
-                        top: expandedPosition,
-                    },
-
-                    expandingAnimationTiming,
-                    "easeOutBack"
-                );
-
-                // start expand-item animation to the expand wrapper
-                // expand the element with class .about-tile-bg-image
-                elementToExpand.animate(
-                    {
-                        left: expandLeft,
-                        top: expandTop,
-                        height: expandHeight,
-                        width: expandWidth,
-                        "max-width": expandWidth,
-                    },
-
-                    expandingAnimationTiming, // animation timing in millisecs
-                    "easeOutBack", //animation easing
-                    function () {
-                        elementToExpand.css({
-                            right: 0,
-                            bottom: 0,
-                            width: "auto",
-                            height: "auto",
-                        });
-
-                        elementToExpand.find(".banner-holder").css({
-                            position: "fixed",
-                        });
-                    }
-                );
-            }
-
-            /* Function to collapse cards */
-            function collapseElement(collapseButton) {
-                // find the element to collapse
-                var elementToCollpseParent = collapseButton.parents(".card");
-                var elementToCollpse = elementToCollpseParent.find(".card-content");
-
-                // find the location of the placeholder
-                var elementToCollpsePlaceholder = elementToCollpse.parents(".card");
-                var elementToCollpsePlaceholderTop = elementToCollpsePlaceholder.offset().top - $("body").scrollTop();
-                var elementToCollpsePlaceholderLeft = elementToCollpsePlaceholder.offset().left;
-                var elementToCollpsePlaceholderHeight = elementToCollpsePlaceholder.outerHeight();
-                var elementToCollpsePlaceholderWidth = elementToCollpsePlaceholder.outerWidth();
-
-                elementToCollpse.find(".banner-holder").css({
-                    position: "absolute",
-                });
-
-                // convert the width and height to numeric values
-                elementToCollpse.css({
-                    right: "auto",
-                    bottom: "auto",
-                    width: elementToCollpse.outerWidth(),
-                    height: elementToCollpse.outerHeight(),
-                });
-
-                $(".list-wrapper").css({
-                    top: 0,
-                    position: "absolute",
-                    overflow: "auto",
-                    "z-index": "1",
-                });
-
-                // Changes height of banner
-                var collapsedHeight = elementToCollpse.find(".banner").data("height");
-                elementToCollpse.find(".banner").animate(
-                    {
-                        height: collapsedHeight,
-                    },
-
-                    collapsingAnimationTiming,
-                    "linear"
-                );
-
-                // Changes position of content
-                var collapsedPosition = elementToCollpse.find(".inner-content").data("position");
-                elementToCollpse.find(".inner-content").animate(
-                    {
-                        top: collapsedPosition,
-                    },
-
-                    collapsingAnimationTiming,
-                    "linear"
-                );
-
-                elementToCollpse.animate(
-                    {
-                        left: elementToCollpsePlaceholderLeft,
-                        top: elementToCollpsePlaceholderTop,
-                        height: elementToCollpsePlaceholderHeight,
-                        width: elementToCollpsePlaceholderWidth,
-                    },
-
-                    collapsingAnimationTiming, // animation timing in millisecs
-                    "linear", //animation easing
-                    function () {
-                        // Removes class 'open'
-                        elementToCollpseParent.removeClass("open");
-
-                        elementToCollpse.css({
-                            position: "relative",
-                            top: "auto",
-                            left: "auto",
-                            width: "100%",
-                            height: "100%",
-                        });
-                    }
-                );
-
-                // Stops preventing 'body' scroll
-                $("body").removeClass("lock");
-            }
-
-            function setCardHeight() {
-                $(".card ").each(function (index, element) {
-                    var slideHeight = $(element).find(".banner-holder").outerHeight();
-                    var containerHeight = $(element).find(".inner-content").outerHeight();
-                    var contentHeight = slideHeight + containerHeight;
-
-                    $(element).css({
-                        height: contentHeight,
-                    });
-                });
-            }
-
-            function attachListeners() {
-                $(document)
-                    .on("click", ".card-content", function () {
-                        if ($(this).parents(".card").hasClass("open")) {
-                            return;
-                        }
-                        expandElement($(this));
-                    })
-                    .on("click", ".card .close-btn", function (event) {
-                        event.stopPropagation();
-                        collapseElement($(this));
-                    })
-                    .on("touchstart", ".card", function () {
-                        $(this).addClass("hover");
-                    })
-                    .on("touchend touchmove touchcancel", ".card", function () {
-                        $(this).removeClass("hover");
-                    });
-            }
-
-            function initialiseCards() {
-                attachListeners();
-                setCardHeight();
-            }
-
-            initialiseCards();
-            //# sourceURL=pen.js
-        </script>
+        <script src="../assets/js/cards.js"></script>
 
         <!--   cp - btn   -->
 
-        <script type="text/javascript">
-            function item1() {
-                let val = "https://mega.nz/file/FlVQHa7a#w5ODKUBq3vpiatwmTw6uS6pqgD7ojmV-Lz_hm_wH-OA";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item2() {
-                let val = "https://mega.nz/file/Fhcz3SBb#Z5SndEEczXEdsEsFEpJZA6xnlF1hh9Yy8lDTLVS8eD8";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item3() {
-                let val = "https://mega.nz/file/4tMQVarL#0kKOlBFF1s87FbLlKuHCpN-DnmR07bn9_U-xp-6NISA";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item4() {
-                let val = "https://mega.nz/file/Yp0jnYJJ#5Bt9NE0ccRQEXcC1QVt1pRWECshAFm94sM-BgGqotUw";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item5() {
-                let val = "https://mega.nz/file/I9tHlBCa#xPH59c7M7yIWh9AwtGQgMV40cYH5y0h1zdHA1acpeeI";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item6() {
-                let val = "https://mega.nz/file/NgtnmCxY#0qkgopIconIE8iwokCXDW_JSoyAqWvPYT3GL3csDm5Y";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item7() {
-                let val = "https://mega.nz/file/RpdVSRgJ#jdU8ele1rh1rZ5oxLphgUDNCv7S58aZhmhucmm2vLxA";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item8() {
-                let val = "https://mega.nz/file/sl01UIxQ#tlWwzHy5XQKYoqTp2RqUenQ5RmW6kznCYbszIpweGlc";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item8() {
-                let val = "https://mega.nz/file/B5E3RC4Z#w5TZQD4RVugvhbAGx7plu5D9VyL6T2waQCAfXRYDL5g";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item8() {
-                let val = "https://mega.nz/file/Z1dCzSAR#RYhj2G3nnPi1IhPhTbmSmVv5_ClqkIsVj1Cf2OC8fzI";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item8() {
-                let val = "https://mega.nz/file/0lMCwIpT#KxaEq2Ga-op0AjOu76gcGcXRzFU1TdZkUWLgqPkwZM8";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-            function item8() {
-                let val = "https://mega.nz/file/tpNhhBpQ#-3QygIDRFyYuuBJMWrrC4rzA3m09-G7PQnRX-rgC2ZE";
-                const selBox = document.createElement("textarea");
-                selBox.value = val;
-                document.body.appendChild(selBox);
-                selBox.focus();
-                selBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(selBox);
-                alert("url copied to clipboard");
-            }
-        </script>
+        <script src="../assets/js/cp-ipa.js"></script>
 
-        <script>
-            function sortList() {
-                var list, i, switching, b, shouldSwitch;
-                list = document.getElementById("card-script");
-                switching = true;
-                /* Make a loop that will continue until
-  no switching has been done: */
-                while (switching) {
-                    // start by saying: no switching is done:
-                    switching = false;
-                    b = list.getElementsByTagName("h2");
-                    // Loop through all list-items:
-                    for (i = 0; i < b.length - 1; i++) {
-                        // start by saying there should be no switching:
-                        shouldSwitch = false;
-                        /* check if the next item should
-      switch place with the current item: */
-                        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-                            /* if next item is alphabetically
-        lower than current item, mark as a switch
-        and break the loop: */
-                            shouldSwitch = true;
-                            break;
-                        }
-                    }
-                    if (shouldSwitch) {
-                        /* If a switch has been marked, make the switch
-      and mark the switch as done: */
-                        b[i].parentNode.insertBefore(b[i + 1], b[i]);
-                        switching = true;
-                    }
-                }
-            }
-        </script>
+<script src="../assets/js/cards-sort.js"></script>
+
 
         <!-- Custom scripts -->
 
-        <script type="text/babel">
-            $(".globalSearchResultNoFoundFeedback").hide();
-            $(".globalInputSearch").keyup(function () {
-                // Retrieve the input field text and reset the count to zero
-                var filter = $(this).val(),
-                    count = 0;
-
-                if (count == 0) {
-                    $(".globalSearchResultNoFoundFeedback").hide();
-                }
-
-                // Loop through the comment list
-                $(".globalTargetList .card-content").each(function () {
-                    // If the list item does not contain the text phrase fade it out
-
-                    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                        $(this).hide(); // MY CHANGE
-                        if (count == 0) {
-                            $(".globalSearchResultNoFoundFeedback").show();
-                        } else {
-                            $(".globalSearchResultNoFoundFeedback").hide();
-                        }
-                        // Show the list item if the phrase matches and increase the count by 1
-                    } else {
-                        $(this).show(); // MY CHANGE
-                        count++;
-                    }
-                });
-            });
-        </script>
+        <script src="../assets/js/err-feedback.js"></script>
 
         <script src="../assets/js/encode.js"></script>
     </body>
