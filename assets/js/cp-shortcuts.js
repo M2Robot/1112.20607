@@ -1,3 +1,14 @@
+function itemNew(){
+    let val = 'https://shareshortcuts.com/download/1832-ip-lookup.html';
+const selBox = document.createElement('textarea');
+selBox.value = val;
+document.body.appendChild(selBox);
+selBox.focus();
+selBox.select();
+document.execCommand('copy');
+document.body.removeChild(selBox);
+alert('url copied to clipboard');
+}
 function item1(){
     let val = 'https://shareshortcuts.com/download/1283-apps-configuration.html';
 const selBox = document.createElement('textarea');
