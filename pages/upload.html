@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firebase File Upload</title>
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+</head>
+<body>
+<div>
+Upload Files<br />
+<input type="file" id="files" multiple /><br /><br />
+<button id="send">Upload</button>
+<p id="uploading"></p>
+<progress value="0" max="100" id="progress"></progress>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+
+<img height="100vh"/>
+
+    <script>
+var test = 'https://firebasestorage.googleapis.com/v0/b/user-panel-3d740.appspot.com/o/a.jpg?alt=media&token=bdd63586-994c-4b23-a9d1-01f417492ee3';
+
+document.querySelector('img').src = test;
+    </script>
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyDmemrfT-ujkU45I5xjBHSiFnsOnB2eD68",
+      authDomain: "user-panel-3d740.firebaseapp.com",
+      databaseURL: "https://user-panel-3d740-default-rtdb.firebaseio.com",
+      projectId: "user-panel-3d740",
+      storageBucket: "user-panel-3d740.appspot.com",
+      messagingSenderId: "842769396944",
+      appId: "1:842769396944:web:c873898327755f3a4b5ad5"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+<script>
+var files = [];
+document.getElementById("files").addEventListener("change", function(e) {
+  files = e.target.files;
+  for (let i = 0; i < files.length; i++) {
+    console.log(files[i]);
+  }
+});
+
+document.getElementById("send").addEventListener("click", function() {
+  //checks if files are selected
+  if (files.length != 0) {
+    //Loops through all the selected files
+    for (let i = 0; i < files.length; i++) {
+      //create a storage reference
+      var storage = firebase.storage().ref(files[i].name);
+
+      //upload file
+      var upload = storage.put(files[i]);
+
+      //update progress bar
+      upload.on(
+        "state_changed",
+        function progress(snapshot) {
+          var percentage =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          document.getElementById("progress").value = percentage;
+        },
+
+        function error() {
+          alert("error uploading file");
+        },
+
+        function complete() {
+          document.getElementById(
+            "uploading"
+          ).innerHTML += `${files[i].name} upoaded <br />`;
+        }
+      );
+    }
+  } else {
+    alert("No file chosen");
+  }
+});
+
+function getFileUrl(filename) {
+  //create a storage reference
+  var storage = firebase.storage().ref(storage, 'images/' + filename);
+
+  //get file url
+  storage
+    .getDownloadURL()
+    .then(function(url) {
+      console.log(url);
+    })
+    .catch(function(error) {
+      console.log("error encountered");
+    });
+}
+</script>
+</body>
+</html>
