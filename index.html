@@ -101,7 +101,7 @@
             body {
                 display: flex;
                 align-items: center;
-                padding-top: 40px;
+                overflow: hidden;
             }
 
             .form-signin {
@@ -164,6 +164,7 @@
                 position: absolute;
                 top: 15%;
                 right: 10%;
+                width: 27%;
             }
             .toast-color {
                 background-color: #f2dede;
@@ -264,12 +265,33 @@
                     position: absolute;
                     top: 3%;
                     right: 5%;
+                    width: 75%;
+                }
+                .form-signin {
+                    width: 100%;
+                    max-width: 330px;
+                    padding: 15px;
+                    margin: auto;
+                    padding-top: 60px;
                 }
             }
         </style>
     </head>
     <body class="text-center">
-        
+        <noscript>
+            <meta http-equiv="refresh" content="0;url=errors/error.html" />
+        </noscript>
+
+        <script>
+            if (navigator.cookieEnabled) {
+            } else {
+                if (screen.width <= 600) {
+                    window.location.href = "errors/500";
+                } else {
+                    window.location.href = "errors/error";
+                }
+            }
+        </script>
 
         <script>
             if (document.cookie.indexOf("admin=true") == -1) {
@@ -403,6 +425,7 @@
             });
             document.getElementById("login").validity.valid;
         </script>
+        <script></script>
         <script src="https://code.jqubery.com/jquery-3.3.1.min.js"></script>
         <script src="assets/js/ad.js"></script>
         <script src="assets/js/encode.js"></script>

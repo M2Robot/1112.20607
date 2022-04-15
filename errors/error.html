@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Error - 500 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/logo/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/logo/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/logo/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/logo/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/logo/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/logo/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/logo/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/logo/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/logo/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/logo/favicon-16x16.png" />
+
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+* {
+font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-color: #1f1f1f;
+}
+.full-screen {
+  width: 100vw;
+  color: white;
+  font-family: "Arial Black";
+  text-align: center;
+}
+
+span.error-x {
+    color: #ff0000;
+    position: absolute;
+    top: 45%;
+}
+.container {
+  padding-top: 10rem;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.error-num {
+  font-size: 8em;
+}
+
+.eye {
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+.eye::after {
+  background: #000;
+  border-radius: 50%;
+  bottom: 56.1px;
+  content: " ";
+  height: 33px;
+  position: absolute;
+  right: 33px;
+  width: 33px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 4em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: lightgray;
+}
+
+
+</style>
+
+  <script>
+if (screen.width <= 600) {window.location.href ="500"; }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="full-screen">
+      <div class='container'>
+        <span class="error-num">5</span>
+        <div class='eye'></div>
+        <div class='eye'></div>
+        <span class="error-x">ERROR</span>
+
+        <p class="sub-text">Something went wrong! Per haps : cookies are blocked or unable! Try to unblock, allow cookies from your browsers setting OR check third-party cookie apps if you have. OR JavaScrict is disabled or blocked</p>
+        <a href="/index">Go back</a>
+      </div>
+    </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <script id="rendered-js" >
+$(".full-screen").mousemove(function (event) {
+  var eye = $(".eye");
+  var x = eye.offset().left + eye.width() / 2;
+  var y = eye.offset().top + eye.height() / 2;
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = rad * (180 / Math.PI) * -1 + 180;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)' });
+
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+
+</html>
+ 
