@@ -454,7 +454,7 @@ y6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z</data>
 			<key>PayloadDescription</key>
 			<string>Rahand.ga is a published website.</string>
 			<key>PayloadDisplayName</key>
-			<string>Web Clip (Rahnd-Dev)</string>
+			<string>Web Clip (RahanD)</string>
 			<key>PayloadIdentifier</key>
 			<string>net.configuration.rahand</string>
 			<key>PayloadOrganization</key>
@@ -474,7 +474,7 @@ y6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z</data>
 	<key>PayloadDescription</key>
 	<string>Rahand.ga is a published website.</string>
 	<key>PayloadDisplayName</key>
-	<string>Rahnd-Dev</string>
+	<string>RahanD</string>
 	<key>PayloadIdentifier</key>
 	<string>net.configuration.rahand</string>
 	<key>PayloadOrganization</key>
